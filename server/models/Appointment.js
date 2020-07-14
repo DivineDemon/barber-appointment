@@ -10,13 +10,13 @@ const AppointmentSchema = new Schema({
     type: Number,
     required: true,
   },
-  issuedate: {
-    type: Date,
-    default: Date.now,
-  },
   appointmentdate: {
     type: Date,
     required: true,
+  },
+  issuedate: {
+    type: Date,
+    default: Date.now,
   },
 });
 

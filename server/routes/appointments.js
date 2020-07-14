@@ -12,4 +12,18 @@ router.get("/", (req, res) => {
     .then((appointments) => res.json(appointments));
 });
 
+// POST /appointments
+// Book Appointments
+// Public Access
+
+router.post("/", (req, res) => {
+  const newAppointment = new Appointment({
+    name: req.body.name,
+    phone: req.body.phone,
+    appointmentdate: req.body.appointmentdate,
+  });
+
+  newAppointment.save().then((appointment) => res.json(appointment));
+});
+
 module.exports = router;
