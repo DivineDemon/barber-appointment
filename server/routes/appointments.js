@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 });
 
 // POST /appointments
-// Book Appointments
+// Book an Appointment
 // Public Access
 
 router.post("/", (req, res) => {
@@ -24,6 +24,18 @@ router.post("/", (req, res) => {
   });
 
   newAppointment.save().then((appointment) => res.json(appointment));
+});
+
+// Delete /appointments
+// Delete the Appointment
+// Public Access
+
+router.delete("/:id", (req, res) => {
+  Appointment.findById(req.params.id)
+    .then((appointment) =>
+      appointment.remove().then(() => res.json({ success: true }))
+    )
+    .catch((err) => res.status(404).json({ success: false }));
 });
 
 module.exports = router;
