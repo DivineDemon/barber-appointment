@@ -1,0 +1,29 @@
+{
+  "name": "barber-appointment",
+  "version": "1.0.0",
+  "description": "Responsive Demo Appointment App",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DivineDemon/barber-appointment.git"
+  },
+  "author": "Mushood Hanif",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DivineDemon/barber-appointment/issues"
+  },
+  "homepage": "https://github.com/DivineDemon/barber-appointment#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.24",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
